@@ -321,17 +321,14 @@
     .banner .slogan h1 {
         font-size: 64px;
     }
-}
 
-@media (hover: none){
     .banner {
         .banner {
             background: 
                 linear-gradient(rgba(0, 151, 178, 0.5), rgba(0, 151, 178, 0.5)),
                 url("../images/banner-mobile.png");
             background-position: center;
-            background-size: contain;
-            background-repeat: repeat-y;
+            background-size: cover;
         }
     }
     .header {
@@ -341,10 +338,3 @@
     
 }
 
-@media (hover: hover) and (max-width: 640px) {
-    .banner {
-        background-position: center;
-        background-size: cover;
-        background-repeat: none;
-    }
-} 
