@@ -156,6 +156,7 @@
 .banner .slogan {
     position: relative;
     text-align: right;
+    padding-top: 100px;
 }
 
 .banner .slogan h1 {
