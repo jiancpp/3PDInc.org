@@ -1,0 +1,148 @@
+
+.about-us {
+    background-color: #fcbf49;
+    box-shadow: 0 -10px 30px 10px rgba(0, 0, 0, 30%);
+
+}
+
+.about-us .vision {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 3rem;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    width: 90%;
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.target-sectors {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.target-sectors .icons {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.target-sectors .icons div {
+    width: auto;
+    margin: 2rem;
+    text-align: center;
+}
+
+.our-programs {
+    background-color: grey;
+}
+
+.our-programs span{
+    height: 20%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    height: 60%;
+}
+
+.button {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+}
+
+.programs-container {
+    display: flex;
+    align-items: center;
+}
+
+.programs-container .programs {
+    margin: 2rem;
+    background-color: white;
+    height: 150px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.programs-container .two {
+    height: 300px;
+    width: 500px;
+}
+
+.programs {
+    justify-content: flex-end;
+    align-items: flex-start;
+} 
+.programs span {
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    width: 100%;
+    height: 35%;
+    padding: 10px 0 0 20px;
+    background-color: rgb(2, 59, 134);
+    color: white
+}
+
+.programs span .learn-more {
+    width: 70px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    margin-top: 5px;
+    border-radius: 20px;
+}
+
+ <div class="about-us flex" id="about-us">
+            <div class="vision">
+                "We envision self reliant communities where individuals are empowered, 
+                partnerships are strong, human rights are upheld, and the environment is protected."
+            </div>
+            <div class="target-sectors">
+                <h1 class="header">Our Target Sectors</h1>
+                <div class="icons">
+                    <div class="no1">
+                        <h2>Youth and Students</h2>
+                    </div>
+                    <div class="no2">
+                        <h2>Urban Poor</h2>
+                    </div>
+                    <div class="no3">
+                        <h2>Women</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="our-programs flex" id="programs">
+            <span></span>
+            <h1 class="header">Our Programs</h1>
+            <div class="container">
+                <div class="button"> . </div>
+                <div class="programs-container">
+                    <div class="programs one"> </div>
+                    <div class="programs two flex">
+                        <span>
+                            <h2>Youth Leadership</h2>
+                            <div class="learn-more"></div>
+                        </span> 
+                    </div>
+                    <div class="programs three"> </div>
+                </div>
+                <div class="button"> . </div>
+            </div>
+        </div>
