@@ -1,0 +1,322 @@
+:root{
+    --blue: rgb(0, 151, 178);
+    --yellow: rgb(255, 204, 49);
+    --yellow2: rgb(252, 191, 74);
+    --orange: rgb(255, 145, 77);
+    --orange2: #d86b1d;
+    --red: #d62828;
+}
+
+@font-face {
+    font-family: 'Batangas';
+    src: url('fonts/Batangas-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Open Sauce Black';
+    src: url('fonts/OpenSauceSans-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sauce Bold';
+    src: url('fonts/OpenSauceSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sauce Regular';
+    src: url('fonts/OpenSauceSans-Regular.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* -------------------------------------------------------------------------- Formatting */
+.flex-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    font-family: 'Batangas', sans-serif;
+    text-shadow: 2px 5px 5px rgba(0, 0, 0, 30%);
+}
+
+.mini-header {
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.container-responsive {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+/* -------------------------------------------------------------------------------------------------*/
+
+.navbar {
+    width: 100%;
+    padding: 30px 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    z-index: 500; /* always at the top */
+    position: fixed;
+    box-shadow: 0 10px 30px 10px rgba(0, 0, 0, 30%);
+    transition: 0.5s;
+
+}
+
+.navbar div {
+    width: auto;
+    padding: 1rem;
+}
+
+.logo {
+    display: flex;
+    transform: translate(-2%, 15%);
+}
+
+.navbar div h1 {
+    font-size: 18px;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    transform: translateX(-10%);
+}
+
+.navbar ul li {
+    margin: 10px;
+    list-style: none;
+    position: relative;
+    text-align: center;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background-color: var(--blue);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+/* Hover effect for navbar */
+.navbar ul li:hover::after {
+    width: 100%;
+}
+@media only screen and (min-width: 650px) {
+    #about-us {
+        height: 80vh;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    #about-us h2 {
+        color: rgba(0, 151, 178, 0.5);
+    }
+
+    #about-us h1 {
+        color: var(--blue);
+        text-shadow: 2px 5px 5px rgba(0, 0, 0, 10%);
+    }
+
+    #about-us .container-carousel{    /* check if this part is different*/
+        height:100vh;  
+        width: 100vw;
+        overflow:auto;
+    }
+}
+
+
+/* ADD THIS PART TILL*/
+
+.carousel{
+   position:relative;
+   width:990px;
+   height:300px;
+   margin:100px auto;
+
+}
+.Items{
+    position:relative;
+}
+
+.Items .program1,
+.Items .program2,
+.Items .program3{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+    width: 100%;
+    height: 300px;  
+    border-radius: 20px;
+  perspective:700px;
+  transform-style: preserve-3d;
+}
+
+.Items .ProgramContainer {
+    position:relative;
+    transform-style: preserve-3d;
+    transition:1.2s;
+    overflow:hidden;
+    width:inherit;
+}
+
+.Items  .program1 {
+    z-index:100;
+}
+
+#about-us .container-carousel .Items .program1 .program-tile span {
+    background-color: #c21f32;
+}
+
+.Items .program2 {
+    z-index:150;
+}
+
+#about-us .container-carousel .Items .program2 .program-tile span {
+    background-color: #eb1c2e;
+}
+
+.Items .program3 {
+    z-index:100;
+}
+
+#about-us .container-carousel .Items .program3 .program-tile span {
+    background-color: #1a3668;
+}
+
+.Items .program1{/*Youth*/
+
+position:absolute;
+transform: translateX(-510px) scale(1);
+}
+
+.Items .program2{ /*Women*/
+
+position:absolute;  
+transform:translateX(50px)  scale(1.55);
+} 
+
+.Items .program3{ /*Poor*/
+
+position:absolute;  
+transform: translateX(220px) scale(1); 
+
+}
+
+.darkeneffect {
+    position:absolute;
+    width:100%;
+    height:100%;
+    opacity:10%;
+    fill-opacity:black;
+    background-color: black;
+    transition-duration:.3s;
+    transition-property: opacity, background-color;
+}
+.lighteneffect {
+    position:absolute;
+    width:100%;
+    height:100%;
+    opacity:1;
+    background-color: black;
+    transition-duration:.3s;
+    transition-property: opacity, background-color;
+}
+
+.LeftRightbuttons {
+    position: absolute;
+    top: 105px;
+    width: 1000px;
+    font-size:45px;
+    color: #7c7474;
+    z-index: 500;
+}
+
+.LeftButton,
+.RightButton {
+    cursor: pointer;
+}
+
+.LeftButton {
+    position: absolute;
+    left: -100px;
+}
+
+.RightButton {
+    position: absolute;
+    right: -80px;
+}
+
+/* -TILL HERE*/
+
+
+/*compare for any differences under this comment*/
+#about-us .container-carousel .program-tile {
+  
+    margin: 0 15px 0 15px;
+    width: 25%;
+    height: 300px;  
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: grey;  /*can be changed into background image*/
+}
+
+#about-us .container-carousel .Items .program-tile span {
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 300px;
+    padding: 30px;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    text-align: left;
+}
+
+#about-us .container-carousel .program-tile span h1 {
+    
+    color: white;
+    font-size: 20px;
+}
+
+#about-us .container-carousel .program-tile span p {
+    
+    color: white;
+}
+

@@ -1,0 +1,59 @@
+/* FOR Expanded Div ------------------------ */
+#programs.expanded {
+    padding-bottom: 40%;
+}
+
+.expandable-container.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ---------------------------------------- */
+
+
+.expandable-container {
+    background-image: url('../images/banner2.png');
+    width: 100%;
+    height: auto;
+    padding-top: 40vh;
+    padding-bottom: 10vh;
+}
+
+.container-about {
+    display: flex;
+    align-items: flex-start;
+}
+
+.container-about .about {
+    width: 55%;
+    padding: 60px 40px 10px;
+    text-align: left;
+}
+
+.expandable-container .about h1 {
+    line-height: 50px;
+    padding-bottom: 20px;
+    color: var(--blue);
+    font-size: 60px;
+} 
+
+.expandable-container .about p {
+    padding: 30px;
+    background-color: var(--blue);
+    color: white;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    #programs.expanded {
+        padding-bottom: 80%;
+    }
+
+    .container-about {
+        align-items: center;
+    }
+
+    .container-about .about{
+        width: 100%;
+    }
+}
