@@ -1,0 +1,330 @@
+:root{
+    --blue: rgb(0, 151, 178);
+    --blue2: rgb(28, 102, 198);
+    --yellow: rgb(255, 204, 49);
+    --yellow2: rgb(252, 191, 74);
+    --orange: rgb(255, 145, 77);
+    --orange2: rgb(216, 107, 29);
+    --red: #d62828;
+}
+
+@font-face {
+    font-family: 'Batangas';
+    src: url('fonts/Batangas-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Open Sauce Black';
+    src: url('fonts/OpenSauceSans-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sauce Bold';
+    src: url('fonts/OpenSauceSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sauce Regular';
+    src: url('fonts/OpenSauceSans-Regular.ttf') format('truetype');
+}
+
+#get-involved {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.8)),
+        url("../images/get-involved-bg.jpg");
+    color: white;
+}
+
+#get-involved span {
+    height: 100px;
+}
+
+#get-involved .header {
+    font-family: 'Batangas', sans-serif;
+    font-size: 60px; 
+    color: white;
+}
+
+#get-involved .subheader {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+#get-involved .text-description {
+    margin-bottom: 40px;
+}
+
+/* --------------------------------------------------------------------------------------- DONATIONS */
+#get-involved #donate {
+    flex-direction: column;
+    background-color: var(--blue);
+    color: black;
+    text-align: center;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 50%;
+    overflow-y: hidden;
+    position: relative; /* dont change: it's relative*/
+    transform: 0.4s;
+}
+
+#get-involved #donate h1{
+    position: absolute;
+    transition: 0.3s;
+}
+
+#get-involved #donate .content {
+    height: 100%;
+    color: transparent;
+    position: absolute;
+    transform: translateY(110%);
+    transition: 0.5s;
+}
+
+#get-involved #donate .content .donate-container {
+    position: relative;
+    height: 100%;    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#get-involved #donate .content .donate-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#get-involved #donate .content .reasons {
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+#get-involved #donate .content .reasons ul {
+    flex-wrap: wrap;
+}
+
+#get-involved #donate .content .reasons span {
+    position: absolute;
+    transform: translateX(-125%);
+    font-size: 35px;
+    color:transparent;
+    transition: 0.4s;
+}
+
+#get-involved #donate .content .reasons li {
+    position: relative;
+    width: 30%;
+    margin:  15px 5% 0 5%;
+    font-weight: bold;
+    text-align: left;
+    list-style: none;
+}
+
+#get-involved #donate .content .reasons .tile img {
+    width: 100px;
+    height: auto;
+}
+
+#get-involved #donate .content .donate-container .description {
+    width: 80%;
+}
+
+#get-involved #donate .content .donate-container div {
+    position: relative;
+}
+
+#get-involved #donate .button {
+    position: absolute;
+    padding: 20px 50px;
+    margin: 0 10% 15px 10%;
+    border-radius: 10px;
+    background-color: var(--yellow2);
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    transition: 0.3s;
+    z-index: 4;
+}
+
+#get-involved #donate a{
+    text-decoration: none;
+}
+
+#get-involved #donate .button:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+#get-involved #donate:hover {
+    cursor: pointer;
+    background-color: rgba(0, 151, 178, 0.7);
+}
+
+#get-involved #donate .button:active{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+#get-involved #donate:active {
+    cursor: pointer;
+    background-color: rgba(0, 151, 178, 0.7);
+}
+
+/* --------------------------------------------------------------------------------------- PARTNERSHIP */
+
+#get-involved #partner {
+    flex-direction: column;
+    background-color: var(--yellow2);
+    color: black;
+    text-align: center;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 50%;
+    overflow-y: hidden;
+    position: relative; /* dont change: it's relative*/
+    transform: 0.4s;
+}
+
+#get-involved #partner h1{
+    position: absolute;
+    transition: 0.3s;
+}
+
+#get-involved #partner #partner-content {
+    height: 100%;
+    color: transparent;
+    position: absolute;
+    transform: translateY(110%);
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#get-involved #partner .content h2 {
+    text-align: left;
+    font-family: 'Batangas', sans-serif;
+    font-size: 35px;
+}
+
+#get-involved #partner .content .email {
+    width: 100%;
+    height: auto;
+    padding: 20px 50px;
+    margin: 15px 0;
+    background-color: rgba(216, 107, 29, 0.8);
+    color: white;
+    
+    box-shadow: 0 5px 3px 2px rgba(0, 0, 0, 20%);
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+#get-involved #partner .content .email:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: var(--orange);
+}
+
+#get-involved #partner .content .email:active {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: var(--orange);
+}
+
+#get-involved #partner .content .social {
+    width: 100%;
+    height: auto;
+    padding: 20px 50px;
+    margin-bottom: 15px;
+    background-color: var(--blue);
+    color: white;
+    
+    box-shadow: 0 5px 3px 2px rgba(0, 0, 0, 20%);
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+#get-involved #partner .content .social:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: var(--blue);
+}
+
+#get-involved #partner .content .social:active {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: var(--blue);
+}
+
+#get-involved #partner:hover {
+    cursor: pointer;
+    background-color: rgba(252, 191, 74, 0.9);
+}
+
+#get-involved #partner:active {
+    cursor: pointer;
+    background-color: rgba(252, 191, 74, 0.9);
+}
+
+
+@media only screen and (max-width: 650px) {
+    #donate-h1, #partner-h1 {
+        font-size: 20px;
+    }
+
+    #get-involved .header {
+        font-size: 40px;
+    }
+
+    #get-involved .subheader {
+        padding: 0 30px;
+    }
+
+    #get-involved #donate {
+        width: 80%;
+        height: auto;
+        padding: 20px 80px;
+        overflow-x: hidden;
+    }
+
+  
+    #get-involved #donate .content .reasons li {
+        font-size: 15px;
+        margin-left: 8vw;
+    }
+
+    #get-involved #donate .content .reasons li span {
+        font-size: 30px;
+        transform: translateX(-120%)
+    }
+
+    #get-involved #donate .content .donate-container .description {
+        font-size: 13px;
+    }
+    
+    #get-involved #donate #channel {
+        font-size: 15px;
+        padding: 20px 30px;
+    }
+    
+    #get-involved #partner {
+        width: 80%;
+        height: auto;
+        padding: 20px 80px;
+    }
+
+    #get-involved #partner .content .email {
+        padding: 20px 30px;
+    }
+
+    #get-involved .header, #get-involved .subheader, #get-involved #partner-content .partner-description h2 {
+        text-align: center;
+    }
+
+    
+}

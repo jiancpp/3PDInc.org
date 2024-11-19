@@ -1,0 +1,249 @@
+#programs {
+    height: auto;
+    padding: 50px 0 50px;
+    text-align: center;
+    position: relative;
+    transition: height 0.3s ease;
+}
+
+#programs h2 {
+    color: rgba(0, 151, 178, 0.5);
+}
+
+#programs h1, #programs h1 span {
+    font-family: 'Batangas', sans-serif;
+    font-size: 60px;
+    color: var(--blue);
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 30%);
+
+}
+
+#programs h1 .yellow {
+    color: var(--yellow);
+}
+
+#programs h1 .orange {
+    color: var(--orange);
+}
+
+#programs h1 .red {
+    color: var(--red);
+}
+
+#programs .container {
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+
+#programs .container .one {
+    background-image: url("../images/program-1.jpg");
+    background-repeat: no-repeat;
+    background-size: 400px;
+}
+
+#programs .container .two {
+    background-image: url("../images/program-2.jpg");
+    background-repeat: no-repeat;
+    background-size: 400px;
+}
+
+#programs .container .three {
+    background-image: url("../images/program-3.jpg");
+    background-repeat: no-repeat;
+    background-size: 400px;
+}
+
+#programs .container .program-tile {
+    margin: 0 15px 0 15px;
+    width: 25%;
+    height: 300px;  
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: grey;
+    box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 30%);
+    transition: 0.5s;
+}
+
+#programs .container .program-tile span {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+    padding: 10px;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    background-color: var(--blue);
+    text-align: left;
+    transition: 0.5s;
+}
+
+#programs .details {
+    height: 100%;
+    overflow-y: hidden;
+}
+
+#programs .container .one span .program-one p:after {
+    padding-top: 5px;
+    font-family: 'Open Sauce Recular', sans-serif;
+    content: "With their aim to practice servant leadership and promote participatory governance, 3PDI organized this project that would build the capacity of youth and students—helping them foster necessary skills such as policymaking processes and advocacy planning";
+}
+
+#programs .container .two span .program-two p:after {
+    padding-top: 5px;
+    font-family: 'Open Sauce Recular', sans-serif;
+    content: "With a mission to uplift the poor and help them achieve self-sufficiency, 3PDI leads in organizing and assisting the urban poor to access the Community Mortgage Program for Social Housing Projects organized by the government. This is to address the number of homeless persons and informal settlers in Bulacan";
+}
+
+#programs .container .three span .program-three p:after {
+    padding-top: 5px;
+    font-family: 'Open Sauce Recular', sans-serif;
+    content: "3PDI provides access to skills development training and available entrepreneurship program by the government that aims to promote self-sufficiency among the youth, the women, and the urban poor by honing their skills."
+}
+
+@media only screen and (min-width: 1000px){
+    #programs .details p{
+        visibility: hidden;
+        position: relative;
+    }
+    
+    #programs .details p:after{
+        visibility: visible;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(100%);
+        color: rgba(255, 255, 255, 0.1);
+        transition: 0.8s;
+        margin: 10px 10px 0 10px;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+    
+    
+    #programs .container .one:hover .program-one p:after {
+        transform: translateY(0%);
+        color: rgba(255, 255, 255, 1);
+    }
+    
+    #programs .container .two:hover .program-two p:after {
+        transform: translateY(0%);
+        color: rgba(255, 255, 255, 1);
+    }
+    
+    #programs .container .three:hover .program-three p:after {
+        transform: translateY(0%);
+        color: rgba(255, 255, 255, 1);
+    }
+    
+    #programs .container .program-tile:hover span{
+        height: 250px;
+    }
+    
+    #programs .container .program-tile:hover{
+        background-size: 500px;
+        width: 35%;
+    }
+
+    
+}
+
+#programs a {
+    text-decoration: none;
+}
+
+#programs .container .program-tile span h2 {
+    font-family: 'Batangas', sans-serif;
+    color: white;
+    font-size: 20px;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 30%);
+}
+
+#programs .container .program-tile span p {
+    color: white;
+    height: 30px;
+}
+
+#programs .button {
+    width: 100%;
+    margin-top: 50px;
+    border-radius: 100px;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--blue);
+    transition: 0.3s;
+
+    position: absolute;
+    bottom: 0;
+    padding: 30px 0;
+    cursor: pointer;
+}
+
+#programs .button:hover {
+    color: rgba(35, 43, 44, 0.777);
+}    
+
+@media only screen and (max-width: 1000px) {
+    #programs .container .program-tile span h2 {
+        font-size: 15px;
+    }
+
+    #programs .container .program-tile .details p  {
+        font-size: 15px;
+    }
+}
+
+
+@media only screen and (max-width: 1000px){
+    #programs .container {
+        flex-direction: column;
+    }
+
+    #programs .container .program-tile { 
+        width: 60%;
+        margin-top: 20px;
+        height: auto;
+        background-size: contain;
+    }
+
+    /* Default styling without hover */
+    #programs .container .program-tile span{
+        margin-top: 50%;
+        overflow-y: none;
+        height: auto;
+    }
+
+    #programs .container .program-tile span p{
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    #programs .container .program-tile span h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 650px) {
+    .header,
+    .details h2 {
+        text-shadow: 1px 2px 5px rgba(0, 0, 0, 10%);
+    }
+}
+
+@media (hover: hover) {
+    .header,
+    .details h2 {
+        text-shadow: 1px 2px 5px rgba(0, 0, 0, 30%);
+    }
+}
+
+@media (hover: none) {
+    #programs .container .program-tile span .details h2, 
+    #programs h1,
+    #programs h1 span {
+        text-shadow: 2px 5px 10px rgba(0, 0, 0, 10%);
+    }
+}

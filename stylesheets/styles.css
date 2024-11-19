@@ -1,0 +1,349 @@
+:root{
+    --blue: rgb(0, 151, 178);
+    --yellow: rgb(255, 204, 49);
+    --yellow2: rgb(252, 191, 74);
+    --orange: rgb(255, 145, 77);
+    --orange2: #d86b1d;
+    --red: #d62828;
+}
+
+@font-face {
+    font-family: 'Batangas';
+    src: url('fonts/Batangas-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Open Sauce Black';
+    src: url('fonts/OpenSauceSans-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sauce Bold';
+    src: url('fonts/OpenSauceSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sauce Regular';
+    src: url('fonts/OpenSauceSans-Regular.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* -------------------------------------------------------------------------- Formatting */
+.flex-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    font-family: 'Batangas', sans-serif;
+    text-shadow: 2px 5px 5px rgba(0, 0, 0, 30%);
+}
+
+.mini-header {
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.container-responsive {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+/* -------------------------------------------------------------------------------------------------*/
+
+.navbar {
+    width: 100%;
+    padding: 30px 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    z-index: 500; /* always at the top */
+    position: fixed;
+    box-shadow: 0 10px 30px 10px rgba(0, 0, 0, 30%);
+    transition: 0.5s;
+
+}
+
+.navbar div {
+    width: auto;
+    padding: 1rem;
+}
+
+.logo {
+    display: flex;
+    transform: translate(-2%, 15%);
+}
+
+.navbar div h1 {
+    font-size: 18px;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    transform: translateX(-10%);
+}
+
+.navbar ul li {
+    margin: 10px;
+    list-style: none;
+    position: relative;
+    text-align: center;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background-color: var(--blue);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+/* Hover effect for navbar */
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100vh;
+    background-image: 
+        linear-gradient(rgba(0, 151, 178, 0.5), rgba(0, 151, 178, 0.5)),
+        url("../images/banner-png.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.banner .slogan {
+    position: relative;
+    text-align: right;
+}
+
+.banner .slogan h1 {
+    color: white;
+    font-size: 90px;
+}
+
+.banner .slogan .btn-grad {
+    margin-top: 10px;
+    width: 200px;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 100px;
+    color: white;
+    text-transform: uppercase;
+    transition: 0.5s;
+
+    background-image: linear-gradient(to right, #FF8008 0%, #FFC837  51%, #FF8008  100%);
+    text-align: center;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.banner .slogan .btn-grad:hover {
+    cursor: pointer;
+    background-position: right center; /* change the direction of the change here */
+    text-decoration: none;
+    color: white;
+} 
+
+#vision {
+    width: 100%;
+    height: auto;
+    padding: 30px 15%;
+    background-color: var(--blue);
+    text-align: center;
+}
+
+#vision h2{
+    color: rgba(255, 255, 255, 50%);
+}
+
+#vision p {
+    margin-top: 15px;
+    font-size: large;
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+}
+
+#vision span {
+    color: var(--yellow);
+}
+
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.accredited {
+    max-width:600px;
+    display: flex;
+    align-items: center;
+}
+
+.accredited h2,
+.accredited img {
+    margin-left: 20px;
+}
+
+.accredited img {
+    width: 50px;
+}
+
+/* --------------------------------------------------------------------------- Media queries */ 
+
+
+/* XS */
+@media (min-width: 475px) { 
+    .container-responsive {
+        max-width: 475px;
+    }
+}
+
+/* S */
+
+@media (min-width: 640px) { 
+    .container-responsive {
+        max-width: 640px;
+    }
+}
+
+/* MD */
+@media (min-width: 768px) { 
+    .container-responsive {
+        max-width: 768px;
+    }
+}
+
+/* L */
+@media (min-width: 1024px) { 
+    .container-responsive {
+        max-width: 1024px;
+    }
+}
+
+/* XL */
+@media (min-width: 1280px) { 
+    .container-responsive {
+        max-width: 1280px;
+    }
+}
+
+/* 2XL */
+@media (min-width: 1536px) { 
+    .container-responsive {
+        max-width: 1536px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    /* for minimized screens */
+    .navbar {
+        margin: 0;
+        width: 100%;
+    }
+
+    
+    .navbar div h1 {
+        font-size: 12px;
+        text-indent: -9999px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+
+    .header {
+        font-family: 'Batangas', sans-serif;
+        text-shadow: 2px 5px 10px rgba(0, 0, 0, 10%);
+        }
+
+    .navbar ul{
+        font-size: 12px;
+        text-indent: -9999px;
+    }
+
+    .logo img {
+        max-height: 80px;
+    }
+
+    #vision p {
+        font-size: 15px;
+    }
+
+    
+
+    .banner .slogan h1 {
+        font-size: 64px;
+    }
+}
+
+@media (hover: none) {
+    .banner {
+        .banner {
+            background-position: center;
+            background-size: contain;
+            background-repeat: repeat-y;
+        }
+    }
+    .header {
+        font-family: 'Batangas', sans-serif;
+        text-shadow: 2px 5px 10px rgba(0, 0, 0, 10%);
+        }
+    
+}
+
+@media (hover: hover) and (max-width: 640px) {
+    .banner {
+        background-position: center;
+        background-size: contain;
+        background-repeat: none;
+    }
+} 
