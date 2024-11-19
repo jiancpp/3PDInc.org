@@ -325,7 +325,7 @@
     }
 }
 
-@media (hover: none) {
+@media (hover: none)  and (max-width: 640px){
     .banner {
         .banner {
             background-position: center;
