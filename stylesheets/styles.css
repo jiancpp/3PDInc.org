@@ -9,22 +9,22 @@
 
 @font-face {
     font-family: 'Batangas';
-    src: url('fonts/Batangas-Bold.otf') format('opentype');
+    src: url('../fonts/Batangas-Bold.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'Open Sauce Black';
-    src: url('fonts/OpenSauceSans-Black.ttf') format('truetype');
+    src: url('../fonts/OpenSauceSans-Black.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Open Sauce Bold';
-    src: url('fonts/OpenSauceSans-Bold.ttf') format('truetype');
+    src: url('../fonts/OpenSauceSans-Bold.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Open Sauce Regular';
-    src: url('fonts/OpenSauceSans-Regular.ttf') format('truetype');
+    src: url('../fonts/OpenSauceSans-Regular.ttf') format('truetype');
 }
 
 * {
