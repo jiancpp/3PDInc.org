@@ -343,7 +343,7 @@
 @media (hover: hover) and (max-width: 640px) {
     .banner {
         background-position: center;
-        background-size: contain;
+        background-size: cover;
         background-repeat: none;
     }
 } 
