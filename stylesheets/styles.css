@@ -325,16 +325,30 @@
     .banner {
         .banner {
             background: 
-                linear-gradient(rgba(0, 151, 178, 0.5), rgba(0, 151, 178, 0.5)),
-                url("../images/banner-mobile.png");
+                linear-gradient(rgba(0, 151, 178, 0.5), rgba(0, 151, 178, 0.5));
             background-position: center;
             background-size: cover;
         }
     }
     .header {
-        font-family: 'Batangas', sans-serif;
+        font-family: 'Open Sauce Bold', sans-serif;
         text-shadow: 2px 5px 10px rgba(0, 0, 0, 10%);
         }
     
+}
+
+
+@media (max-width: 640px) {
+    .banner {
+        background-image: 
+        linear-gradient(rgba(0, 151, 178, 0.5), rgba(0, 151, 178, 0.5));
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .header {
+    font-family: 'Batangas', sans-serif;
+    text-shadow: 2px 5px 10px rgba(0, 0, 0, 10%);
+    }
 }
 
